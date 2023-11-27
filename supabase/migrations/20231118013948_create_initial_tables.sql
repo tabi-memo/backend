@@ -1,7 +1,7 @@
 create table
   users (
     id BIGSERIAL primary key not null,
-    uuid uuid not null unique,
+    uuid uuid not null unique default uuid_generate_v4(),
     email text unique not null,
     name text not null,
     profile_picture_url varchar(255)
@@ -10,7 +10,7 @@ create table
 create table
   trips (
     id BIGSERIAL primary key not null,
-    uuid uuid not null unique,
+    uuid uuid not null unique default uuid_generate_v4(),
     user_id bigint references users(id),
     title text not null,
     date_from DATE,
@@ -23,7 +23,7 @@ create table
 create table
   activity (
     id BIGSERIAL primary key not null,
-    uuid uuid not null unique,
+    uuid uuid not null unique default uuid_generate_v4(),
     trip_id bigint references trips (id),
     title text not null,
     time_from TIMESTAMPTZ,
@@ -38,13 +38,14 @@ create table
 create table
   tags (
     id BIGSERIAL primary key not null,
-    uuid uuid not null unique,
+    uuid uuid not null unique default uuid_generate_v4(),
     name varchar(255) not null unique
   );
 
 create table
   trip_tags (
     id BIGSERIAL primary key not null,
+    uuid uuid not null unique default uuid_generate_v4(),
     trip_id bigint references trips (id),
     tag_id bigint references tags (id)
   );
@@ -52,7 +53,7 @@ create table
 create table
   invitations (
     id BIGSERIAL primary key not null,
-    uuid uuid not null unique,
+    uuid uuid not null unique default uuid_generate_v4(),
     trip_id bigint references trips (id),
     invited_by_user_id bigint references users(id),
     invitee_user_id bigint references users(id),
