@@ -17,6 +17,7 @@ create table
     date_to DATE,
     cost numeric,
     description text,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     image_storage_object_id uuid -- FK to storage_objects, omitted as per your request
   );
 
