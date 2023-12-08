@@ -10,7 +10,8 @@
     "node": "^v20"
   },
   "scripts": {
-    "prettier": "prettier --write './**/*.{ts,js,md}'"
+    "prettier": "prettier --write './**/*.{ts,js,md}'",
+    "dbreset": "supabase db reset --debug"
   },
   "devDependencies": {
     "@types/node": "20.8.10",
