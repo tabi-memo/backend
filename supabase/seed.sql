@@ -123,9 +123,9 @@ SECURITY definer
 AS $$
 BEGIN
     INSERT INTO public.users
-    (email, name)
+    (uuid, email, name)
     VALUES
-    (new.email, new.raw_user_meta_data ->> 'name');
+    (new.id, new.email, new.raw_user_meta_data ->> 'name');
     return new;
 END;
 $$;
