@@ -1,7 +1,6 @@
 create table
   users (
-    id BIGSERIAL primary key not null,
-    uuid uuid not null unique default uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     email text unique not null,
     name text not null,
     profile_picture_url varchar(255)
@@ -9,9 +8,8 @@ create table
 
 create table
   trips (
-    id BIGSERIAL primary key not null,
-    uuid uuid not null unique default uuid_generate_v4(),
-    user_id bigint references users(id),
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID REFERENCES users(id),
     title text not null,
     date_from DATE not null,
     date_to DATE,
@@ -23,9 +21,8 @@ create table
 
 create table
   activity (
-    id BIGSERIAL primary key not null,
-    uuid uuid not null unique default uuid_generate_v4(),
-    trip_id bigint references trips (id),
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    trip_id UUID REFERENCES trips (id),
     title text not null,
     time_from TIMESTAMPTZ not null,
     time_to TIMESTAMPTZ,
@@ -38,26 +35,23 @@ create table
 
 create table
   tags (
-    id BIGSERIAL primary key not null,
-    uuid uuid not null unique default uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     name varchar(255) not null unique
   );
 
 create table
   trip_tags (
-    id BIGSERIAL primary key not null,
-    uuid uuid not null unique default uuid_generate_v4(),
-    trip_id bigint references trips (id),
-    tag_id bigint references tags (id)
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    trip_id UUID REFERENCES trips (id),
+    tag_id UUID REFERENCES tags (id)
   );
 
 create table
   invitations (
-    id BIGSERIAL primary key not null,
-    uuid uuid not null unique default uuid_generate_v4(),
-    trip_id bigint references trips (id),
-    invited_by_user_id bigint references users(id),
-    invitee_user_id bigint references users(id),
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    trip_id UUID REFERENCES trips (id),
+    invited_by_user_id UUID REFERENCES users(id),
+    invitee_user_id UUID REFERENCES users(id),
     email varchar(255) not null,
     invitation_url varchar(255) not null,
     permission_level int not null
