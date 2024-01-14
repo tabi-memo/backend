@@ -16,7 +16,7 @@ create table
     cost numeric,
     description text,
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-    image_storage_object_id uuid -- FK to storage_objects, omitted as per your request
+    image_url varchar(255)
   );
 
 create table
@@ -30,7 +30,7 @@ create table
     url varchar(255),
     memo text,
     cost numeric,
-    image_storage_object_id uuid -- FK to storage_objects, omitted as per your request
+    image_url varchar(255)
   );
 
 create table
