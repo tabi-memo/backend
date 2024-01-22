@@ -10,6 +10,7 @@ export const activity: {
   url: string;
   memo: string;
   cost: number;
+  cost_unit: string | null;
   image_storage_object_id: string | null;
 }[] = [
   {
@@ -22,6 +23,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 1 memo",
     cost: 100,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -34,6 +36,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 2 memo",
     cost: 200,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -46,6 +49,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 3 memo",
     cost: 300,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -58,6 +62,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 4 memo",
     cost: 400,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -70,6 +75,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 5 memo",
     cost: 500,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -82,6 +88,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 6 memo",
     cost: 600,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -94,6 +101,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 7 memo",
     cost: 700,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -106,6 +114,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 8 memo",
     cost: 800,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -118,6 +127,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 9 memo",
     cost: 900,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -130,6 +140,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 10 memo",
     cost: 1000,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -142,6 +153,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 11 memo",
     cost: 1100,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -154,6 +166,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 12 memo",
     cost: 1200,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -166,6 +179,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 13 memo",
     cost: 1300,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -178,6 +192,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 14 memo",
     cost: 1400,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -190,6 +205,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 15 memo",
     cost: 1500,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -202,6 +218,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 16 memo",
     cost: 1600,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -214,6 +231,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 17 memo",
     cost: 1700,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -226,6 +244,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 18 memo",
     cost: 1800,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -238,6 +257,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 19 memo",
     cost: 1900,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -250,6 +270,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 20 memo",
     cost: 2000,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -262,6 +283,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 21 memo",
     cost: 2100,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -274,6 +296,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 22 memo",
     cost: 2200,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -286,6 +309,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 23 memo",
     cost: 2300,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -298,6 +322,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 24 memo",
     cost: 2400,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -310,6 +335,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 25 memo",
     cost: 2500,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -322,6 +348,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 26 memo",
     cost: 2600,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -334,6 +361,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 27 memo",
     cost: 2700,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -346,6 +374,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 28 memo",
     cost: 2800,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -358,6 +387,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 29 memo",
     cost: 2900,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
   {
@@ -370,6 +400,7 @@ export const activity: {
     url: "https://www.google.com",
     memo: "Activity 30 memo",
     cost: 3000,
+    cost_unit: "CAD",
     image_storage_object_id: null,
   },
 ];

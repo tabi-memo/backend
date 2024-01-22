@@ -12,6 +12,7 @@ export const tripsFrom = async (
     date_from: ISO8601Date;
     date_to: ISO8601Date;
     cost: number;
+    cost_unit: string | null;
     description: string;
     created_at: ISO8601;
     image_storage_object_id: string | null;
@@ -33,6 +34,7 @@ export const tripsFrom = async (
     date_from: "2021-01-01",
     date_to: "2021-01-10",
     cost: 1000,
+    cost_unit: "$",
     description: "Trip 1 description",
     created_at: "2024-01-04T23:12:52.392723+00:00",
     image_storage_object_id: null,
@@ -53,6 +55,7 @@ export const tripsFrom = async (
     date_from: "2021-02-01",
     date_to: "2021-02-10",
     cost: 2000,
+    cost_unit: "$",
     description: "Trip 2 description",
     created_at: "2024-01-04T23:12:52.392723+00:00",
     image_storage_object_id: null,
@@ -73,6 +76,7 @@ export const tripsFrom = async (
     date_from: "2021-03-01",
     date_to: "2021-03-10",
     cost: 3000,
+    cost_unit: "$",
     description: "Trip 3 description",
     created_at: "2024-01-04T23:12:52.392723+00:00",
     image_storage_object_id: null,
@@ -93,6 +97,7 @@ export const tripsFrom = async (
     date_from: "2021-04-01",
     date_to: "2021-04-10",
     cost: 4000,
+    cost_unit: "$",
     description: "Trip 4 description",
     created_at: "2024-01-04T23:12:52.392723+00:00",
     image_storage_object_id: null,
@@ -113,6 +118,7 @@ export const tripsFrom = async (
     date_from: "2021-05-01",
     date_to: "2021-05-10",
     cost: 5000,
+    cost_unit: "$",
     description: "Trip 5 description",
     created_at: "2024-01-04T23:12:52.392723+00:00",
     image_storage_object_id: null,
@@ -133,6 +139,7 @@ export const tripsFrom = async (
     date_from: "2021-06-01",
     date_to: "2021-06-10",
     cost: 6000,
+    cost_unit: "$",
     description: "Trip 6 description",
     created_at: "2024-01-04T23:12:52.392723+00:00",
     image_storage_object_id: null,
@@ -153,6 +160,7 @@ export const tripsFrom = async (
     date_from: "2021-07-01",
     date_to: "2021-07-10",
     cost: 7000,
+    cost_unit: "$",
     description: "Trip 7 description",
     created_at: "2024-01-04T23:12:52.392723+00:00",
     image_storage_object_id: null,
@@ -173,6 +181,7 @@ export const tripsFrom = async (
     date_from: "2021-08-01",
     date_to: "2021-08-10",
     cost: 8000,
+    cost_unit: "$",
     description: "Trip 8 description",
     created_at: "2024-01-04T23:12:52.392723+00:00",
     image_storage_object_id: null,
@@ -193,6 +202,7 @@ export const tripsFrom = async (
     date_from: "2021-09-01",
     date_to: "2021-09-10",
     cost: 9000,
+    cost_unit: "$",
     description: "Trip 9 description",
     created_at: "2024-01-04T23:12:52.392723+00:00",
     image_storage_object_id: null,
@@ -213,6 +223,7 @@ export const tripsFrom = async (
     date_from: "2021-10-01",
     date_to: "2021-10-10",
     cost: 10000,
+    cost_unit: "$",
     description: "Trip 10 description",
     created_at: "2024-01-04T23:12:52.392723+00:00",
     image_storage_object_id: null,
