@@ -14,6 +14,7 @@ create table
     date_from DATE not null,
     date_to DATE,
     cost numeric,
+    cost_unit text,
     description text,
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     image_storage_object_id uuid -- FK to storage_objects, omitted as per your request
@@ -30,6 +31,7 @@ create table
     url varchar(255),
     memo text,
     cost numeric,
+    cost_unit text,
     image_storage_object_id uuid -- FK to storage_objects, omitted as per your request
   );
 
