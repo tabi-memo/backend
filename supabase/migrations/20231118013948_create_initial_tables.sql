@@ -40,6 +40,7 @@ create table
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     name varchar(255) not null unique,
     user_id UUID REFERENCES users(id)
+    CONSTRAINT unique_name_by_user UNIQUE(name, user_id)
   );
 
 create table
