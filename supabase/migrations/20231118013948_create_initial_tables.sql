@@ -38,8 +38,8 @@ create table
 create table
   tags (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    name varchar(255) not null unique,
-    user_id UUID REFERENCES users(id)
+    name VARCHAR(255) NOT NULL,
+    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
     CONSTRAINT unique_name_by_user UNIQUE(name, user_id)
   );
 
