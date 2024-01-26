@@ -38,7 +38,8 @@ create table
 create table
   tags (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    name varchar(255) not null unique
+    name varchar(255) not null unique,
+    user_id UUID REFERENCES users(id)
   );
 
 create table
