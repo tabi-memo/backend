@@ -38,7 +38,10 @@ create table
 create table
   tags (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    name varchar(255) not null unique
+    name VARCHAR(255) NOT NULL,
+    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    CONSTRAINT unique_name_by_user UNIQUE(name, user_id)
   );
 
 create table
