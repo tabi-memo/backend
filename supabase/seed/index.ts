@@ -2,7 +2,7 @@ import { createServerClient } from "@supabase/ssr";
 import { users } from "./data/users";
 import { tripsFrom } from "./data/trips";
 import { activity } from "./data/activity";
-import { tags } from "./data/tags";
+import { tagsForm } from "./data/tags";
 import { trip_tags } from "./data/trip_tags";
 import { invitationsFrom } from "./data/invitations";
 
@@ -59,7 +59,7 @@ const insertUsers = async (): Promise<void> => {
   for (const { table, data } of [
     { table: "trips", data: await tripsFrom(supabaseWithPublicSchema) },
     { table: "activity", data: activity },
-    { table: "tags", data: tags },
+    { table: "tags", data: await tagsForm(supabaseWithPublicSchema) },
     { table: "trip_tags", data: trip_tags },
     {
       table: "invitations",
