@@ -15,7 +15,7 @@ export const tripsFrom = async (
     cost_unit: string | null;
     description: string;
     created_at: ISO8601;
-    image_storage_object_id: string | null;
+    image_url: string | null;
   }[]
 > => {
   const userEmails = [
@@ -53,7 +53,7 @@ export const tripsFrom = async (
       cost_unit: "$",
       description: "Trip 1 description",
       created_at: "2024-01-04T23:12:52.392723+00:00",
-      image_storage_object_id: null,
+      image_url: null,
     },
     {
       id: "e5bf6c2a-37c3-4622-8849-a236e6d6544d",
@@ -65,7 +65,7 @@ export const tripsFrom = async (
       cost_unit: "$",
       description: "Trip 2 description",
       created_at: "2024-01-04T23:12:52.392723+00:00",
-      image_storage_object_id: null,
+      image_url: null,
     },
     {
       id: "4c6bd85c-7a7c-42f1-855b-5fb4c90ad478",
@@ -77,7 +77,7 @@ export const tripsFrom = async (
       cost_unit: "$",
       description: "Trip 3 description",
       created_at: "2024-01-04T23:12:52.392723+00:00",
-      image_storage_object_id: null,
+      image_url: null,
     },
     {
       id: "b410c958-7ca9-45d1-9c81-a86d682a3e60",
@@ -89,7 +89,7 @@ export const tripsFrom = async (
       cost_unit: "$",
       description: "Trip 4 description",
       created_at: "2024-01-04T23:12:52.392723+00:00",
-      image_storage_object_id: null,
+      image_url: null,
     },
     {
       id: "3cff1e3c-3eca-4188-9fee-62acbba36a67",
@@ -101,7 +101,7 @@ export const tripsFrom = async (
       cost_unit: "$",
       description: "Trip 5 description",
       created_at: "2024-01-04T23:12:52.392723+00:00",
-      image_storage_object_id: null,
+      image_url: null,
     },
     {
       id: "53dcd021-e07c-4de9-b54a-111bcf895fb3",
@@ -113,7 +113,7 @@ export const tripsFrom = async (
       cost_unit: "$",
       description: "Trip 6 description",
       created_at: "2024-01-04T23:12:52.392723+00:00",
-      image_storage_object_id: null,
+      image_url: null,
     },
     {
       id: "78e4ad46-a85e-49ef-9438-aa4157895040",
@@ -125,7 +125,7 @@ export const tripsFrom = async (
       cost_unit: "$",
       description: "Trip 7 description",
       created_at: "2024-01-04T23:12:52.392723+00:00",
-      image_storage_object_id: null,
+      image_url: null,
     },
     {
       id: "32ffb6dd-66cf-4c8c-97d0-6315e3114104",
@@ -137,7 +137,7 @@ export const tripsFrom = async (
       cost_unit: "$",
       description: "Trip 8 description",
       created_at: "2024-01-04T23:12:52.392723+00:00",
-      image_storage_object_id: null,
+      image_url: null,
     },
     {
       id: "99ba6ab8-d953-4767-beb1-11aa670a38da",
@@ -149,7 +149,7 @@ export const tripsFrom = async (
       cost_unit: "$",
       description: "Trip 9 description",
       created_at: "2024-01-04T23:12:52.392723+00:00",
-      image_storage_object_id: null,
+      image_url: null,
     },
     {
       id: "9b41713e-5e4e-406a-b474-221837c4f2d8",
@@ -161,7 +161,7 @@ export const tripsFrom = async (
       cost_unit: "$",
       description: "Trip 10 description",
       created_at: "2024-01-04T23:12:52.392723+00:00",
-      image_storage_object_id: null,
+      image_url: null,
     },
   ];
 };

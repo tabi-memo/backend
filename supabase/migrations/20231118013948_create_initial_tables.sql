@@ -17,7 +17,7 @@ create table
     cost_unit text,
     description text,
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-    image_storage_object_id uuid -- FK to storage_objects, omitted as per your request
+    image_url varchar(255)
   );
 
 create table
@@ -32,7 +32,19 @@ create table
     memo text,
     cost numeric,
     cost_unit text,
-    image_storage_object_id uuid -- FK to storage_objects, omitted as per your request
+    image_url varchar(255),
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+  );
+
+create table
+  activity_uploaded_files (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    activity_id UUID REFERENCES activity (id),
+    file_name varchar(255) not null,
+    file_url varchar(255) not null,
+    content_type varchar(255) not null,
+    file_data jsonb,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
   );
 
 create table
