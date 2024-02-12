@@ -59,8 +59,8 @@ create table
 create table
   trip_tags (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    trip_id UUID REFERENCES trips (id),
-    tag_id UUID REFERENCES tags (id)
+    trip_id UUID REFERENCES trips (id) ON DELETE CASCADE,
+    tag_id UUID REFERENCES tags (id) ON DELETE CASCADE
   );
 
 create table
