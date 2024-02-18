@@ -9,7 +9,7 @@ create table
 create table
   trips (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    user_id UUID REFERENCES users(id),
+    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
     title text not null,
     date_from TIMESTAMPTZ not null,
     date_to TIMESTAMPTZ,
@@ -23,7 +23,7 @@ create table
 create table
   activity (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    trip_id UUID REFERENCES trips (id),
+    trip_id UUID NOT NULL REFERENCES trips (id) ON DELETE CASCADE,
     title text not null,
     time_from TIMESTAMPTZ not null,
     time_to TIMESTAMPTZ,
@@ -39,10 +39,10 @@ create table
 create table
   activity_uploaded_files (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    activity_id UUID REFERENCES activity (id),
+    activity_id UUID NOT NULL REFERENCES activity (id) ON DELETE CASCADE,
     file_name varchar(255) not null,
     file_url varchar(255) not null,
-    content_type varchar(255) not null,
+    content_type varchar(255),
     file_data jsonb,
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
   );
@@ -59,8 +59,8 @@ create table
 create table
   trip_tags (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    trip_id UUID REFERENCES trips (id) ON DELETE CASCADE,
-    tag_id UUID REFERENCES tags (id) ON DELETE CASCADE
+    trip_id UUID NOT NULL REFERENCES trips (id) ON DELETE CASCADE,
+    tag_id UUID NOT NULL REFERENCES tags (id) ON DELETE CASCADE
   );
 
 create table
