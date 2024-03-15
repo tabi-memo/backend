@@ -12,7 +12,8 @@
   "scripts": {
     "prettier": "prettier --write './**/*.{ts,js,md}'",
     "seed": "./seed.sh",
-    "dbreset": "supabase db reset --debug"
+    "dbreset": "supabase db reset --debug",
+    "dbpush": "supabase db push"
   },
   "devDependencies": {
     "@supabase/ssr": "^0.0.10",
